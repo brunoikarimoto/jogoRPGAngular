@@ -1,0 +1,74 @@
+<div class="container">
+  <h1>ADICIONAR NOVO PLAYER</h1>
+
+  <form [formGroup]="formulario" (ngSubmit)="enviarFormulario()">
+    <label for="nome">Nome:</label>
+    <input
+      type="text"
+      formControlName="nome"
+      name="nome"
+      placeholder="Nome"
+      required
+    />
+    <label for="classe">Classe:</label>
+    <input
+      type="text"
+      formControlName="classe"
+      name="classe"
+      placeholder="Classe"
+    />
+    <label for="nivel">Nível:</label>
+    <input
+      type="number"
+      formControlName="nivel"
+      name="nivel"
+      placeholder="Nível"
+    />
+    <label for="forca">Força:</label>
+    <input
+      type="number"
+      formControlName="forca"
+      name="forca"
+      placeholder="Força"
+    />
+    <label for="velocidade">Velocidade:</label>
+    <input
+      type="number"
+      formControlName="velocidade"
+      name="velocidade"
+      placeholder="Velocidade"
+    />
+    <label for="inteligencia">Inteligência:</label>
+    <input
+      type="number"
+      formControlName="inteligencia"
+      name="inteligencia"
+      placeholder="Inteligência"
+    />
+    <label for="resistencia">Resistência:</label>
+    <input
+      type="number"
+      formControlName="resistencia"
+      name="resistencia"
+      placeholder="Resistência"
+    />
+    <label for="vida">Vida:</label>
+    <input
+      type="number"
+      formControlName="vida"
+      name="vida"
+      placeholder="Vida"
+    />
+    <label for="qntBoss">Quantidade de Boss eliminados:</label>
+    <input
+      type="number"
+      formControlName="qntBoss"
+      name="qntBoss"
+      placeholder="Quantidade de Boss"
+    />
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <p *ngIf="erros">{{ erros }}</p>
+</div>

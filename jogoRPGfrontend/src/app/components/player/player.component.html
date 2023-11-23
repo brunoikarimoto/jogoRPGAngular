@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Lista de Players:</h1>
+  <table *ngIf="lista.length > 0">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Classe</th>
+        <th>Nível</th>
+        <th>Força</th>
+        <th>Velocidade</th>
+        <th>Inteligência</th>
+        <th>Resistência</th>
+        <th>Vida</th>
+        <th>Boss</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let player of lista">
+        <td>{{ player.nome }}</td>
+        <td>{{ player.classe }}</td>
+        <td>{{ player.nivel }}</td>
+        <td>{{ player.forca }}</td>
+        <td>{{ player.velocidade }}</td>
+        <td>{{ player.inteligencia }}</td>
+        <td>{{ player.resistencia }}</td>
+        <td>{{ player.vida }}</td>
+        <td>{{ player.qntBoss }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
